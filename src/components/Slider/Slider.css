@@ -1,0 +1,40 @@
+.app-slider {
+    height: calc(100vh - 50px);
+    width: 100vw;
+    position: relative;
+}
+
+.app-slider-images {
+    width: 300vw;
+    height: 100%;
+    display: flex;
+    transition: all 1s ease;
+}
+
+.app-slider-images img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-slider-buttons {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    width: fit-content;
+    gap: 10px;
+}
+
+.app-slider-buttons-left,
+.app-slider-buttons-right {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
