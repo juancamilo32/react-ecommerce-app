@@ -1,0 +1,67 @@
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.app-card-image:hover {
+    .app-card-image-secondImg {
+        z-index: 2;
+    }
+}
+
+.app-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.app-card-image-mainImg {
+    z-index: 1;
+}
+
+.app-card-image-new {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    color: teal;
+    padding: 3px 5px;
+    z-index: 3;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.app-card-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.app-card-prices {
+    display: flex;
+    gap: 10px;
+}
+
+.app-card-prices h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.app-card-prices h3:first-child {
+    text-decoration: line-through;
+    color: gray;
+}

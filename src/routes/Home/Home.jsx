@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { Slider } from '../../components'
+import { Slider, Featured } from '../../components'
 
 const Home = () => {
     return (
-        <Slider />
+        <div>
+            <Slider />
+            <Featured type="featured" />
+            <Featured type="trending" />
+        </div>
     )
 }
 
