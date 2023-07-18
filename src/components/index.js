@@ -4,6 +4,7 @@ import Slider from "./Slider/Slider";
 import Featured from "./Featured/Featured";
 import Card from "./Card/Card";
 import Categories from "./Categories/Categories";
+import Contact from "./Contact/Contact";
 
 export {
     Navbar,
@@ -11,5 +12,6 @@ export {
     Slider,
     Featured,
     Card,
-    Categories
+    Categories,
+    Contact
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Slider, Featured, Categories } from '../../components'
+import { Slider, Featured, Categories, Contact } from '../../components'
 
 const Home = () => {
     return (
@@ -9,6 +9,7 @@ const Home = () => {
             <Featured type="featured" />
             <Categories />
             <Featured type="trending" />
+            <Contact />
         </div>
     )
 }

@@ -1,0 +1,99 @@
+.app-contact {
+    background-color: #2879fe;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+}
+
+.app-contact-wrapper {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-contact-wrapper-email input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.app-contact-wrapper-email button {
+    padding: 10px;
+    color: white;
+    background-color: #333;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.app-contact-wrapper-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: lightgray;
+}
+
+@media screen and (max-width:1000px) {
+    .app-contact-wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .app-contact-wrapper {
+        width: 95%;
+    }
+
+    .app-contact-wrapper h3 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .app-contact-wrapper h3 {
+        display: none;
+    }
+
+    .app-contact-wrapper {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .app-contact-wrapper-email input {
+        padding: 5px;
+        width: 90px;
+    }
+
+    .app-contact-wrapper-email button {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:360px) {
+
+    .app-contact-wrapper {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .app-contact-wrapper-email input {
+        width: 80px;
+    }
+
+}
