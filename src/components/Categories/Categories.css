@@ -1,0 +1,76 @@
+.app-categories {
+    display: flex;
+    height: 80vh;
+    gap: 10px;
+    margin: 10px;
+}
+
+.app-categories-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.col-large {
+    flex: 2;
+}
+
+.app-categories-row {
+    flex: 1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-categories-row button {
+    min-width: 100px;
+    width: fit-content;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    background-color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.app-categories-row button:hover {
+    background-color: lightgray;
+}
+
+.app-categories-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+@media screen and (max-width:700px) {
+
+    .app-categories-row button {
+        min-width: 60px;
+        height: 30px;
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .app-categories-row button {
+        min-width: 60px;
+        height: 30px;
+        padding: 5px;
+        font-size: 8px;
+    }
+}
