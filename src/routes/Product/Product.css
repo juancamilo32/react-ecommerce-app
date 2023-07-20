@@ -1,0 +1,150 @@
+.app-product {
+    padding: 20px 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.app-product-images {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.app-product-images-all {
+    flex: 1;
+}
+
+.app-product-images-all img {
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.app-product-images-main {
+    flex: 5;
+}
+
+.app-product-images-main img {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    max-width: 550px;
+}
+
+.app-product-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.app-product-content-price {
+    font-size: 30px;
+    color: #2879fe;
+    font-weight: 500;
+}
+
+.app-product-content-description {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.app-product-content-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-product-content-quantity button {
+    border: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.app-product-content-addcart {
+    width: 250px;
+    padding: 10px;
+    background-color: #2879fe;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.app-product-content-addcart:hover {
+    background-color: #5fb2ce;
+}
+
+.app-product-content-addwish {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #2879fe;
+    font-size: 14px;
+}
+
+.app-product-content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    color: gray;
+    font-size: 14px;
+}
+
+.app-product-content-info hr {
+    width: 200px;
+    border: 1px solid lightgray;
+    margin-left: 0;
+}
+
+.app-product-content-divider {
+    width: 100%;
+    border: 1px solid lightgray;
+    margin-left: 0;
+}
+
+@media screen and (max-width:800px) {
+    .app-product {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .app-product {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .app-product-images-all img {
+        height: 100px;
+    }
+
+    .app-product-content-addcart {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:1500px) {
+
+    .app-product-content {
+        flex: 2;
+    }
+}
