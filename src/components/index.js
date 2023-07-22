@@ -6,6 +6,7 @@ import Card from "./Card/Card";
 import Categories from "./Categories/Categories";
 import Contact from "./Contact/Contact";
 import List from "./List/List";
+import Cart from "./Cart/Cart";
 
 export {
     Navbar,
@@ -15,5 +16,6 @@ export {
     Card,
     Categories,
     Contact,
-    List
+    List,
+    Cart
 }

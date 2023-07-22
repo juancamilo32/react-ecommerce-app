@@ -75,7 +75,7 @@
     background: lightblue;
     transition: 0.5s ease;
     flex-direction: column;
-    z-index: 5;
+    z-index: 1000;
 }
 
 .navbar-smallscreen-overlay .navbar-smallscreen-overlay-close {
