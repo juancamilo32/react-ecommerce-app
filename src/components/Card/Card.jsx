@@ -2,12 +2,9 @@ import React from 'react'
 
 import './Card.css'
 import { Link } from 'react-router-dom'
+import { scrollToTop } from '../../constants/constants'
 
 const Card = ({ item }) => {
-
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    };
 
     return (
         <Link className='card-link' to={`/product/${item.id}`} onClick={scrollToTop}>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import './Footer.css'
 import { payment, logo } from '../../assets';
+import { scrollToTop } from '../../constants/constants';
 
 const Footer = () => {
     return (
@@ -11,15 +12,15 @@ const Footer = () => {
             <div className='app-footer-top'>
                 <div className='app-footer-top-list'>
                     <h3>Products</h3>
-                    <Link className="link footer-link" to="/products/1">Women</Link>
-                    <Link className="link footer-link" to="/products/2">Men</Link>
-                    <Link className="link footer-link" to="/products/3">Kids</Link>
+                    <Link className="link footer-link" to="/products/1" onClick={scrollToTop}>Women</Link>
+                    <Link className="link footer-link" to="/products/2" onClick={scrollToTop}>Men</Link>
+                    <Link className="link footer-link" to="/products/3" onClick={scrollToTop}>Kids</Link>
                 </div>
                 <div className='app-footer-top-list'>
                     <h3>Chogo's</h3>
-                    <Link className="link footer-link" to="/">About Us</Link>
-                    <Link className="link footer-link" to="/">FAQ</Link>
-                    <Link className="link footer-link" to="/">Contact</Link>
+                    <Link className="link footer-link" to="/" onClick={scrollToTop}>About Us</Link>
+                    <Link className="link footer-link" to="/" onClick={scrollToTop}>FAQ</Link>
+                    <Link className="link footer-link" to="/" onClick={scrollToTop}>Contact</Link>
                 </div>
                 <div className='app-footer-top-about'>
                     <h3>About</h3>
