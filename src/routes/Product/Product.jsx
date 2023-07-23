@@ -5,6 +5,8 @@ import { itemsData } from '../../constants/constants'
 
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
 
@@ -12,6 +14,8 @@ const Product = () => {
 
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [quantity, setQuantity] = React.useState(1);
+
+    const dispatch = useDispatch();
 
     return (
         <div className='app-product'>
@@ -33,7 +37,14 @@ const Product = () => {
                     {quantity}
                     <button onClick={() => setQuantity(prev => prev + 1)}>+</button>
                 </div>
-                <button className='app-product-content-addcart'>
+                <button className='app-product-content-addcart' onClick={() => dispatch(addToCart({
+                    id,
+                    title: itemsData[id - 1].title,
+                    desc: itemsData[id - 1].desc,
+                    price: itemsData[id - 1].price,
+                    img: itemsData[id - 1].img,
+                    quantity
+                }))}>
                     <BsCartPlus fontSize={20} />ADD TO CART
                 </button>
                 <div className='app-product-content-addwish'>

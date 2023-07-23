@@ -9,11 +9,13 @@ import { BsSearch, BsPerson, BsCart } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import Cart from '../Cart/Cart';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
     const [toggleMenu, setToggleMenu] = React.useState(false);
     const [toggleCart, setToggleCart] = React.useState(false);
+    const products = useSelector(state => state.cart.products);
 
     return (
         <div>
@@ -31,7 +33,7 @@ const Navbar = () => {
                     <BsPerson size={24} className='icon icon-profile' />
                     <div className='app-navbar-buttons-cart' onClick={() => setToggleCart(prev => !prev)}>
                         <BsCart size={20} className='icon' />
-                        <span className='app-navbar-buttos-cart-bubble'>1</span>
+                        <span className='app-navbar-buttos-cart-bubble'>{products.length}</span>
                     </div>
                     <div className='app-navbar-smallscreen'>
                         <GiHamburgerMenu color='black' fontSize={20} onClick={() => setToggleMenu(true)} />
