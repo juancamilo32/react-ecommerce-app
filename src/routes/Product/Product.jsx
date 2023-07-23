@@ -4,8 +4,11 @@ import './Product.css'
 import { itemsData } from '../../constants/constants'
 
 import { BsCartPlus, BsHeart } from "react-icons/bs";
+import { useParams } from 'react-router-dom';
 
 const Product = () => {
+
+    const id = useParams().id;
 
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [quantity, setQuantity] = React.useState(1);
@@ -14,22 +17,17 @@ const Product = () => {
         <div className='app-product'>
             <div className='app-product-images'>
                 <div className='app-product-images-all'>
-                    <img src={itemsData[0].img} alt="" onClick={e => setSelectedImage(0)} />
-                    <img src={itemsData[0].img2} alt="" onClick={e => setSelectedImage(1)} />
+                    <img src={itemsData[id - 1].img} alt="" onClick={e => setSelectedImage(0)} />
+                    <img src={itemsData[id - 1].img2} alt="" onClick={e => setSelectedImage(1)} />
                 </div>
                 <div className='app-product-images-main'>
-                    <img src={selectedImage === 0 ? itemsData[0].img : itemsData[0].img2} />
+                    <img src={selectedImage === 0 ? itemsData[id - 1].img : itemsData[id - 1].img2} />
                 </div>
             </div>
             <div className='app-product-content'>
-                <h1>Title</h1>
-                <span className='app-product-content-price'>$199</span>
-                <p className='app-product-content-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                    suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-                    lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
-                    suspendisse ultrices gravida. Risus commodo viverra maecenas.
-                </p>
+                <h1>{itemsData[id - 1].title}</h1>
+                <span className='app-product-content-price'>${itemsData[id - 1].price}</span>
+                <p className='app-product-content-description'>{itemsData[id - 1].desc}</p>
                 <div className='app-product-content-quantity'>
                     <button onClick={() => setQuantity(prev => prev === 1 ? 1 : prev - 1)}>-</button>
                     {quantity}

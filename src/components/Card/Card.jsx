@@ -4,8 +4,13 @@ import './Card.css'
 import { Link } from 'react-router-dom'
 
 const Card = ({ item }) => {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
+
     return (
-        <Link className='card-link' to={`/product/${item.id}`}>
+        <Link className='card-link' to={`/product/${item.id}`} onClick={scrollToTop}>
             <div className='app-card'>
                 <div className='app-card-image'>
                     {item.isNew ? <span className='app-card-image-new'>New Season</span> : null}
