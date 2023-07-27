@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div className='app-navbar-categories'>
                     <Link className="link" to="/products/1">Women</Link>
                     <Link className="link" to="/products/2">Men</Link>
-                    <Link className="link" to="/products/3">Kids</Link>
+                    <Link className="link" to="/products/3">All Products</Link>
                 </div>
                 <div className='app-navbar-buttons'>
                     <BsSearch size={20} className='icon icon-search' />
@@ -44,7 +44,7 @@ const Navbar = () => {
                                     <div className='app-navbar-smallscreen-items'>
                                         <Link className="link" to="/products/1" onClick={() => setToggleMenu(false)}>Women</Link>
                                         <Link className="link" to="/products/2" onClick={() => setToggleMenu(false)}>Men</Link>
-                                        <Link className="link" to="/products/3" onClick={() => setToggleMenu(false)}>Kids</Link>
+                                        <Link className="link" to="/products/3" onClick={() => setToggleMenu(false)}>All Products</Link>
                                     </div>
                                 </div> :
                                 null

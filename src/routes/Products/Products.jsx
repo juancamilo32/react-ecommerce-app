@@ -13,21 +13,6 @@ const Products = () => {
         <div className='app-products'>
             <div className='app-products-filters'>
                 <div className='app-products-filters-items'>
-                    <h2>Category</h2>
-                    <div className='app-products-filters-items-item'>
-                        <input type='checkbox' id='1' value={1} />
-                        <label htmlFor='1'>Shoes</label>
-                    </div>
-                    <div className='app-products-filters-items-item'>
-                        <input type='checkbox' id='2' value={2} />
-                        <label htmlFor='2'>Pants</label>
-                    </div>
-                    <div className='app-products-filters-items-item'>
-                        <input type='checkbox' id='3' value={3} />
-                        <label htmlFor='3'>Shirts</label>
-                    </div>
-                </div>
-                <div className='app-products-filters-items'>
                     <h2>Filter By Price</h2>
                     <div className='app-products-filters-items-item'>
                         <span>0</span>

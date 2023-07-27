@@ -14,7 +14,7 @@ const Footer = () => {
                     <h3>Products</h3>
                     <Link className="link footer-link" to="/products/1" onClick={scrollToTop}>Women</Link>
                     <Link className="link footer-link" to="/products/2" onClick={scrollToTop}>Men</Link>
-                    <Link className="link footer-link" to="/products/3" onClick={scrollToTop}>Kids</Link>
+                    <Link className="link footer-link" to="/products/3" onClick={scrollToTop}>All Products</Link>
                 </div>
                 <div className='app-footer-top-list'>
                     <h3>Chogo's</h3>
