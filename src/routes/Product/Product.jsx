@@ -10,7 +10,8 @@ import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
 
-    const id = useParams().id;
+    const id = parseInt(useParams().id);
+    const data = itemsData.find(item => item.id === id);
 
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [quantity, setQuantity] = React.useState(1);
@@ -19,19 +20,22 @@ const Product = () => {
 
     return (
         <div className='app-product'>
+            {
+                console.log(itemsData)
+            }
             <div className='app-product-images'>
                 <div className='app-product-images-all'>
-                    <img src={itemsData[id - 1].img} alt="" onClick={e => setSelectedImage(0)} />
-                    <img src={itemsData[id - 1].img2} alt="" onClick={e => setSelectedImage(1)} />
+                    <img src={data.img} alt="" onClick={e => setSelectedImage(0)} />
+                    <img src={data.img2} alt="" onClick={e => setSelectedImage(1)} />
                 </div>
                 <div className='app-product-images-main'>
-                    <img src={selectedImage === 0 ? itemsData[id - 1].img : itemsData[id - 1].img2} />
+                    <img src={selectedImage === 0 ? data.img : data.img2} />
                 </div>
             </div>
             <div className='app-product-content'>
-                <h1>{itemsData[id - 1].title}</h1>
-                <span className='app-product-content-price'>${itemsData[id - 1].price}</span>
-                <p className='app-product-content-description'>{itemsData[id - 1].desc}</p>
+                <h1>{data.title}</h1>
+                <span className='app-product-content-price'>${data.price}</span>
+                <p className='app-product-content-description'>{data.desc}</p>
                 <div className='app-product-content-quantity'>
                     <button onClick={() => setQuantity(prev => prev === 1 ? 1 : prev - 1)}>-</button>
                     {quantity}
@@ -39,10 +43,10 @@ const Product = () => {
                 </div>
                 <button className='app-product-content-addcart' onClick={() => dispatch(addToCart({
                     id,
-                    title: itemsData[id - 1].title,
-                    desc: itemsData[id - 1].desc,
-                    price: itemsData[id - 1].price,
-                    img: itemsData[id - 1].img,
+                    title: data.title,
+                    desc: data.desc,
+                    price: data.price,
+                    img: data.img,
                     quantity
                 }))}>
                     <BsCartPlus fontSize={20} />ADD TO CART
