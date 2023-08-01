@@ -33,7 +33,7 @@ const Navbar = () => {
                     <BsPerson size={24} className='icon icon-profile' />
                     <div className='app-navbar-buttons-cart' onClick={() => setToggleCart(prev => !prev)}>
                         <BsCart size={20} className='icon' />
-                        <span className='app-navbar-buttos-cart-bubble'>{products.length}</span>
+                        {products.length > 0 ? <span className='app-navbar-buttos-cart-bubble'>{products.length}</span> : null}
                     </div>
                     <div className='app-navbar-smallscreen'>
                         <GiHamburgerMenu color='black' fontSize={20} onClick={() => setToggleMenu(true)} />
